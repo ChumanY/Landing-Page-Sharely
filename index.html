@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu Landing Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="js/mi-script.js"></script>
+    <script defer src="functions.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <div id="logo">
+            <span>Toulouse Lautrec</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#sobre-mi">Sobre mí</a></li>
+                <li><a href="#portafolio">Portafolio</a></li>
+                <li><a href="#bitacora">Bitacora</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="imagen-container">
+        <img src="img/genshin.png" alt="Mi Imagen" class="img-container">
+    </div>
+
+    <!--=============== SOBRE MÍ ===============-->
+
+    <section class="about" id="sobre-mi">
+        <h2>Sobre Mí</h2>
+        <div class="about-container">
+            <div class="about-text">
+                <p><span class="large-text">Sharely Cenepo Merino</span><br>
+                    Tengo 23 años, soy del signo sagitario estudio en la Toulouse desde el 2020<br>
+                    Vivo con mi mama, mis 3 hermanos y un hámster que se llama viter, Me gusta<br>
+                    jugar básquet, ver anime, juagar videojuegos y salir con mis amigos ,Trabajo <br>
+                    en atención al cliente en las tiendas mass.<br>
+                    Necesita tiempo para poder liberar su mente de las tareas del día a día, <br>
+                    un lugar donde no sienta presión y que pueda ser feliz. <br>
+                    Conseguir un trabajo con buenos ingresos.</p>
+            </div>
+            <div class="about-image">
+                <img src="img/me.png" alt="Mi Imagen">
+            </div>
+        </div>
+    </section>
+
+    <!--=============== PORTAFOLIO ===============-->
+
+    <section class="portfolio" id="portafolio">
+        <h2>Portafolio</h2>
+        <iframe src="components/carousel/index.html"  width="80%" height="900"></iframe>
+
+    </section>
+    <!--=============== BITACORA ===============-->
+
+    <section class="bitacora" id="bitacora">
+        <h2>Bitácora</h2>
+        <div class="bitacora-container">
+            <div class="bitacora-image">
+                <img src="img/Bitacora_Landing.svg" alt="bitacora-imagen">
+            </div>
+            <a href="bitacora.html"  class="bitacora-text">
+                <button>MI BITACORA</button>
+
+            </a>
+
+        </div>
+    </section>
+
+    <!--=============== CONTÁCTENOS ===============-->
+
+    <section class="contact" id="contacto">
+        <div class="contact-container" style="background-color: #0c5b96;">
+            <div class="contact-text">
+                <p><span class="large-text">Contacto</span><br>
+                    Urb el palmar, calle los perales 240<br>
+                    (+51) 936 965 282<br>
+                    sharelymerino@gmail.com<br>
+                    Sitios Web Globales - PERU, Lima - Español<br>
+                    © 2023Toulouse LautrecPERU<br>
+            </div>
+            <div class="contact-image">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3900.4065353595392!2d-77.0074607241347!3d-12.152702043883906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105b821f47ad9db%3A0x36aa2e4ee5eca04b!2sC.%20los%20Perales%20240%2C%20Lima%2015063!5e0!3m2!1ses-419!2spe!4v1695879667997!5m2!1ses-419!2spe"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
