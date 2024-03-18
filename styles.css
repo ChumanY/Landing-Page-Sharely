@@ -426,7 +426,7 @@ nav a:hover:after {
 }
 
 .about-us-container img {
-  max-width: 50%;
+  max-width: 70%;
   height: auto;
   transition: transform 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease; /* Transición suave */
 }
