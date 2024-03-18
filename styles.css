@@ -14,6 +14,7 @@ body {
   width: 100%;
   position: fixed; /* Fija la posición del navbar */
   z-index: 1000; /* Asegura que esté por encima de otros elementos */
+
 }
 
 @media screen and (max-width: 600px) {
@@ -241,6 +242,7 @@ nav a:hover:after {
 }
 
 .left-side img {
+  margin-top: 10%;
   max-width: 60%; /* La imagen se ajustará automáticamente al ancho del contenedor */
   height: auto; /* La altura se ajustará automáticamente para mantener la proporción */
 }
@@ -280,11 +282,11 @@ nav a:hover:after {
 }
 
 .grid-container {
-  margin: 2vw;
+  margin: 1vw;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, auto);
-  gap: 10px;
+  gap: 1vw;
   align-items: center;
   justify-content: space-evenly;
   align-content: space-evenly;
@@ -299,7 +301,7 @@ nav a:hover:after {
   color: #ffff;
   font-size: 1em;
   font-family: "Myriad Pro SemiCond Regular", sans-serif;
-  width: 60%;
+  width: 75%;
   height: 90%;
   padding: 10px;
   transition: transform 0.3s ease; /* Agrega una transición suave */
