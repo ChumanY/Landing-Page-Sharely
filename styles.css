@@ -14,7 +14,6 @@ body {
   width: 100%;
   position: fixed; /* Fija la posición del navbar */
   z-index: 1000; /* Asegura que esté por encima de otros elementos */
-
 }
 
 @media screen and (max-width: 600px) {
@@ -247,7 +246,7 @@ nav a:hover:after {
 
 .left-side img {
   margin-top: 10%;
-  max-width:75%; /* La imagen se ajustará automáticamente al ancho del contenedor */
+  max-width: 75%; /* La imagen se ajustará automáticamente al ancho del contenedor */
   height: auto; /* La altura se ajustará automáticamente para mantener la proporción */
 }
 
@@ -344,6 +343,7 @@ nav a:hover:after {
   max-width: 80%;
   height: auto;
   border-radius: 20px; /* Especifica el radio de las esquinas */
+  margin-top: 7%;
 }
 
 @media screen and (max-width: 768px) {
@@ -372,9 +372,7 @@ nav a:hover:after {
 }
 
 .grid-item-product:hover img {
-  transform: scale(
-    0.95
-  );
+  transform: scale(0.95);
   cursor: pointer; /* Reducir ligeramente el tamaño de la imagen al hacer hover */
 }
 
@@ -510,4 +508,3 @@ footer {
     left: -10%;
   }
 }
-
