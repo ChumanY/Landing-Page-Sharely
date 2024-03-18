@@ -16,6 +16,13 @@ body {
   z-index: 1000; /* Asegura que esté por encima de otros elementos */
 }
 
+@media screen and (max-width: 600px) {
+  .sticky-header {
+    position: relative; /* Cambia la posición a relativa en pantallas pequeñas */
+    top: auto; /* Elimina la posición superior fija en pantallas pequeñas */
+    /* Agrega otros estilos según sea necesario */
+  }
+}
 .sticky-header.transparent {
   background-color: rgba(8, 74, 109, 0.2); /* Color de fondo con opacidad */
 }
@@ -377,17 +384,36 @@ nav a:hover:after {
 
 .about-us-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   text-align: center;
   padding: 20px;
   color: #ffff;
   font-size: 1em;
   font-family: "Myriad Pro SemiCond Regular", sans-serif;
-  padding-left: 20%;
-  padding-right: 20%;
+  padding-left: 5%;
+  padding-right: 5%;
   background-color: #022b47;
   padding-bottom: 5%;
+}
+
+.left-side-about-us {
+  flex: 1;
+}
+
+.right-side-about-us {
+  flex: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .about-us-container {
+    flex-direction: column; /* Cambiar a diseño de columna en pantallas pequeñas */
+  }
+
+  .left-side-about-us,
+  .right-side-about-us {
+    width: 100%; /* Asegurar que ambos lados ocupen todo el ancho en pantallas pequeñas */
+  }
 }
 
 .about-us-container h2 {
@@ -478,3 +504,4 @@ footer {
     left: -10%;
   }
 }
+
