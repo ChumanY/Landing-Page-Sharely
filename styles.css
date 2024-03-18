@@ -1,352 +1,480 @@
 @font-face {
-    font-family: 'barbie'; /* Nombre que asignas a la fuente */
-    src: url('fonts/barbie.ttf') format('truetype'); /* Ruta al archivo de fuente */
+  font-family: "Myriad Pro SemiCond Regular";
+  src: url("fonts/MyriadPro-SemiCn.ttf") format("truetype");
 }
 
-html, body {
+body {
+  margin: 0;
+}
+
+.sticky-header {
+  padding: 20px 0;
+  background: #084a6d;
+  font-family: "Myriad Pro SemiCond Regular", sans-serif;
+  width: 100%;
+  position: fixed; /* Fija la posición del navbar */
+  z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+
+.sticky-header.transparent {
+  background-color: rgba(8, 74, 109, 0.2); /* Color de fondo con opacidad */
+}
+.container {
+  padding: 0 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+.logo-box {
+  float: left;
+  margin-right: 20px;
+}
+.logo-box a {
+  outline: none;
+  display: block;
+}
+.logo-box img {
+  max-height: 70px;
+  width: auto;
+  display: block;
+}
+nav {
+  overflow: hidden;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  float: right;
+}
+nav li {
+  display: inline-block;
+  margin-left: 25px;
+  height: 70px;
+  line-height: 70px;
+  transition: 0.5s linear;
+}
+nav a {
+  font-size: 20px;
+  text-decoration: none;
+  display: block;
+  position: relative;
+  color: #ffff;
+}
+nav a:after {
+  content: "";
+  width: 0;
+  height: 2px;
+  position: absolute;
+  left: 0;
+  bottom: 15px;
+  background: #ffff;
+  transition: width 0.5s linear;
+}
+nav a:hover:after {
+  width: 100%;
+}
+
+@media screen and (max-width: 660px) {
+  header {
+    text-align: center;
+  }
+  .logo-box {
+    float: none;
+    display: inline-block;
+    margin: 0 0 16px 0;
+  }
+  ul {
+    float: none;
+  }
+  nav li:first-of-type {
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 550px) {
+  nav {
+    overflow: visible;
+  }
+  nav li {
+    display: block;
     margin: 0;
-    padding: 0;
-}
-
-header {
-    background-color: #0c5b96;
-    padding: 1em 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: white;
-}
-
-#logo {
-    font-family: "Myriad Pro", Arial, sans-serif;
-    font-size: 24px;
-    font-weight: bold;
-    padding-left: 1em;
-}
-
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding-right: 1em;
-    font-family: "Myriad Pro", Arial, sans-serif;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 1em;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-}
-
-.img-container {
-    width: 100%;
-    clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 0% 50%);
-}
-
-.imagen-container {
-    width: 100%;
-    max-height: 30vw;
-    overflow: hidden;
-}
-
-@media (max-width: 768px) {
-    
-  
-
-    header {
-        flex-direction: column; 
-        text-align: center; 
-        height: auto;
-    }
-
-    #logo {
-        padding: 0; 
-    }
-
-    nav ul {
-        padding: 0;
-    }
-
-    nav ul li {
-        margin: 0;
-    }
-}
-
-
-.about {
-    text-align: center; 
-    padding: 40px;
-    font-family: "Myriad Pro", Arial, sans-serif;
-}
-
-
-.about h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
-.about-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    line-height: 1.5;
-}
-
-.about-image {
-    flex: 1; 
-    text-align: center;
-    margin: 10px;
-}
-
-.about-image img {
-    max-width: 60%;    
-    height: auto;
-}
-
-.about-text {
-    flex: 1; 
-    text-align: left;
-    padding-left: 10vw;
-}
-
-.about-text p {
-    font-size: 16px;
-}
-
-.large-text {
-    font-size: 24px; 
-    font-weight: bold;
-}
-
-@media (max-width: 768px) {
-    .about-container {
-        flex-direction: column;
-    }
-
-    .about-image,
-    .about-text {
-        flex: 1; 
-    }
-
-    .about-image img {
-        width: 100%; 
-        height: auto;
-    }
-
-    .about-text {
-        padding-left: 0; 
-    }
-}
-
-.portfolio {
-    text-align: center; 
-    padding: 40px;
-    font-family: "Myriad Pro", Arial, sans-serif;
-}
-
-.bitacora {
-    text-align: center; 
-    padding: 40px;
-    font-family: "Myriad Pro", Arial, sans-serif;
-}
-
-
-
-.bitacora-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    line-height: 1.5;
-}
-
-.bitacora-image {
-    flex: 1; 
-    text-align: center;
-    margin: 10px;
-}
-
-.bitacora-image img {
-    max-width: 100%;    
-    height: auto;
-}
-
-.bitacora-text {
-    flex: 1; 
-    text-align: left;
-    padding-left: 10vw;
-}
-
-.bitacora-text p {
-    font-size: 16px;
-}
-
-.bitacora-text {
-    font-size: 24px; 
-    font-weight: bold;
-}
-
-@media (max-width: 768px) {
-    .bitacora-container {
-        flex-direction: column;
-    }
-
-    .bitacora-image,
-    .bitacora-text {
-        flex: 1; 
-    }
-
-    .bitacora-image img {
-        width: 100%; 
-        height: auto;
-    }
-
-    .bitacora-text {
-        padding-left: 0; 
-    }
-}
-
-button {
-    --c:  #229091; /* the color*/
-    
-    box-shadow: 0 0 0 .1em inset var(--c); 
-    --_g: linear-gradient(var(--c) 0 0) no-repeat;
-    background: 
-      var(--_g) calc(var(--_p,0%) - 100%) 0%,
-      var(--_g) calc(200% - var(--_p,0%)) 0%,
-      var(--_g) calc(var(--_p,0%) - 100%) 100%,
-      var(--_g) calc(200% - var(--_p,0%)) 100%;
-    background-size: 50.5% calc(var(--_p,0%)/2 + .5%);
-    outline-offset: .1em;
-    transition: background-size .4s, background-position 0s .4s;
+    height: 40px;
+    line-height: 40px;
   }
-  button:hover {
-    --_p: 100%;
-    transition: background-position .4s, background-size 0s;
+  nav li:hover {
+    background: rgba(0, 0, 0, 0.1);
   }
-  button:active {
-    box-shadow: 0 0 9e9q inset #0009; 
-    background-color: var(--c);
-    color: #fff;
+  nav a:after {
+    content: none;
   }
-  
+}
 
-  button {
-    font-family: system-ui, sans-serif;
-    font-size: 3.5rem;
-    cursor: pointer;
-    padding: .1em .6em;
-    font-weight: bold;  
-    border: none;
+.home-container {
+  position: relative;
+  width: 100%; /* Opcional: ajusta el ancho según sea necesario */
+  height: 700px; /* Altura de la sección de inicio, ajusta según sea necesario */
+  background-image: url("img/foto\ fondo.jpg"); /* Ruta de tu imagen de fondo */
+  background-size: cover; /* Cubre todo el contenedor */
+  background-position: center; /* Centra la imagen */
+  overflow: hidden;
+}
+
+.background-shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(
+    6,
+    61,
+    91,
+    0.85
+  ); /* Color de sombra semitransparente (#063D5B) con mayor opacidad */
+}
+
+.content {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: space-between; /* Ajusta el espacio entre los elementos */
+  align-items: center;
+  width: 70%;
+  margin-top: 20px;
+}
+
+.text {
+  color: white; /* Color del texto */
+  width: 50%;
+  margin: auto;
+  font: 700 normal 2.5em "tahoma";
+  text-shadow: 5px 2px #222324, 2px 4px #222324, 3px 5px #222324;
+  font-size: 3vw;
+}
+
+.image {
+  flex: 1;
+  text-align: center;
+  animation: moveUpDown 2s ease-in-out infinite alternate; /* Animación de movimiento */
+}
+
+.image img {
+  max-width: 80%;
+  max-height: 80%;
+  transition: transform 0.3s ease; /* Transición para suavizar el cambio */
+}
+
+.image:hover img {
+  transform: scale(
+    1.1
+  ); /* Aumenta ligeramente la escala en un 10% cuando el cursor pasa sobre la imagen */
+}
+
+@keyframes moveUpDown {
+  0% {
+    transform: translateY(0);
   }
-
-  .contact {
-    text-align: center; 
-    font-family: "Myriad Pro", Arial, sans-serif;
-    color: white;
-}
-
-
-.contact h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
-.contact-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    line-height: 2.5;
-}
-
-.contact-image {
-    flex: 1; 
-    text-align: center;
-    margin: 10px;
-}
-
-.contact-image img {
-    max-width: 60%;    
-    height: auto;
-}
-
-.contact-text {
-    flex: 1; 
-    text-align: left;
-    padding-left: 10vw;
-}
-
-.contact-text p {
-    font-size: 16px;
-}
-
-.contact-text {
-    font-size: 24px; 
-    font-weight: bold;
-}
-
-@media (max-width: 768px) {
-    .contact-container {
-        flex-direction: column;
-    }
-
-    .contact-image,
-    .contact-text {
-        flex: 1; 
-    }
-
-    .contact-image img {
-        width: 100%; 
-        height: auto;
-    }
-
-    .contact-text {
-        padding-left: 0; 
-    }
-}
-
-
-.bitacora-rectangle {
-    font-family: 'barbie', sans-serif;    
-    width: 100%;
-    height: 30vw;
-    color: white;
-    font-size: 8vw;
-    background-color: #021823;
-    display: flex;
-    align-items: center; 
-    justify-content: center; 
-}
-
-.bitacora-row {
-    display: flex;
-    width: 100%;
-}
-
-.bitacora-column {
-    flex: 1; 
-    padding: 20px; 
-}
-
-.bitacora-column img {
-    max-width: 90%;
-    height: auto; 
+  100% {
+    transform: translateY(-20px); /* Desplazamiento hacia arriba */
+  }
 }
 
 @media screen and (max-width: 768px) {
-    .bitacora-row {
-        flex-direction: column; 
-    }
-    .bitacora-column {
-        width: 100%; 
-    }
+  .content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .image img {
+    max-width: 80%;
+    max-height: 80%;
+  }
 }
 
-.bitacora-column p {
-    font-size: 30px; 
-    line-height: 1.5;
-    
+@media screen and (max-width: 768px) {
+  .text {
+    margin-top: 1vw;
+    font-size: 6vw; /* Ajusta el tamaño del texto para pantallas pequeñas */
+    text-align: center; /* Centra el texto */
+    margin-bottom: 1vw;
+  }
+}
+
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  background-image: url("/img/fondo\ 1.png");
+  background-size: cover;
+  background-position: center;
+  padding-left: 5vw;
+  padding-right: 5vw;
+}
+
+.left-side,
+.right-side {
+  flex: 1;
+  text-align: center; /* Centra el contenido horizontalmente */
+}
+
+.left-side h2 {
+  font-family: "Niagara Solid Regular", sans-serif;
+  font-weight: lighter;
+  color: #ffff;
+  font: 700 normal 3em "tahoma";
+  text-shadow: 5px 2px #222324, 2px 4px #222324, 3px 5px #222324;
+  margin-bottom: 10px; /* Espacio entre el título y la oración */
+}
+
+.left-side p {
+  color: #ffff;
+  font-size: 1.5em;
+  font-family: "Myriad Pro SemiCond Regular", sans-serif;
+  margin-bottom: 20px; /* Espacio entre la oración y la imagen */
+}
+
+.left-side img {
+  max-width: 60%; /* La imagen se ajustará automáticamente al ancho del contenedor */
+  height: auto; /* La altura se ajustará automáticamente para mantener la proporción */
+}
+
+@media screen and (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+  }
+
+  .left-side,
+  .right-side {
+    width: 100%; /* Ambos lados ocupan el 100% del contenedor en pantallas pequeñas */
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(5px) rotate(1deg);
+  }
+  50% {
+    transform: translateX(-5px) rotate(-1deg);
+  }
+  75% {
+    transform: translateX(3px) rotate(1deg);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Aplica la animación a la imagen */
+.vibrating {
+  animation: shake 0.5s ease-in-out; /* Aplica la animación una sola vez */
+}
+
+.grid-container {
+  margin: 2vw;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 10px;
+  align-items: center;
+  justify-content: space-evenly;
+  align-content: space-evenly;
+  justify-items: center;
+}
+
+.grid-item {
+  background-color: #022b47;
+  border-radius: 40px; /* Especifica el radio de las esquinas */
+  text-align: center;
+  padding-top: 1vw;
+  color: #ffff;
+  font-size: 1em;
+  font-family: "Myriad Pro SemiCond Regular", sans-serif;
+  width: 60%;
+  height: 90%;
+  padding: 10px;
+  transition: transform 0.3s ease; /* Agrega una transición suave */
+}
+.grid-item:hover {
+  transform: scale(
+    1.05
+  ); /* Hace que el elemento crezca un poco al pasar el cursor sobre él */
+}
+.grid-item img {
+  max-width: 50%; /* La imagen se ajustará automáticamente al ancho de la celda */
+  height: auto; /* La altura se ajustará automáticamente para mantener la proporción */
+}
+
+@media screen and (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+  }
+  .grid-item {
+    width: 60%;
+  }
+}
+
+.product-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Divide el contenedor en dos columnas */
+  gap: 20px; /* Espacio entre las dos columnas */
+  background-color: #022b47;
+  flex-wrap: wrap; /* Permitir que los elementos se envuelvan */
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.right-side img {
+  max-width: 80%;
+  height: auto;
+  border-radius: 20px; /* Especifica el radio de las esquinas */
+}
+
+@media screen and (max-width: 768px) {
+  .product-container {
+    grid-template-columns: 1fr; /* Cambia a una sola columna en pantallas pequeñas */
+  }
+
+  .right-side {
+    grid-row: 1; /* Coloca el lado derecho encima del lado izquierdo */
+  }
+}
+
+.grid-container-product {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr); /* Dos filas */
+  padding: 20px;
+  gap: 10px;
+}
+
+.grid-item-product img {
+  max-width: 80%;
+  height: auto;
+  border-radius: 20px; /* Especifica el radio de las esquinas */
+  transition: transform 0.2s ease; /* Agregar transición para suavizar el efecto */
+}
+
+.grid-item-product:hover img {
+  transform: scale(
+    0.95
+  );
+  cursor: pointer; /* Reducir ligeramente el tamaño de la imagen al hacer hover */
+}
+
+@media screen and (max-width: 768px) {
+  .product-container-container {
+    grid-template-columns: 1fr;
+  }
+
+  .right-side {
+    grid-row: 1;
+  }
+}
+
+.about-us-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  color: #ffff;
+  font-size: 1em;
+  font-family: "Myriad Pro SemiCond Regular", sans-serif;
+  padding-left: 20%;
+  padding-right: 20%;
+  background-color: #022b47;
+  padding-bottom: 5%;
+}
+
+.about-us-container h2 {
+  font-size: 2em;
+}
+
+.about-us-container p {
+  font-size: 1em;
+  margin-bottom: 20px;
+}
+
+.about-us-container img {
+  max-width: 50%;
+  height: auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease; /* Transición suave */
+}
+
+.about-us-container img:hover {
+  transform: scale(1) translateY(10px); /* Aumenta el tamaño al 110% y se desplaza 10px hacia abajo */
+  box-shadow: 0 0 10px rgba(31, 230, 230, 1.5); /* Agrega una sombra */
+}
+
+footer {
+  background-color: #222324;
+  height: 50%;
+}
+
+.middle {
+  padding-top: 2vw;
+  padding-bottom: 2vw;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  width: 90px;
+  height: 90px;
+  background: #f1f1f1;
+  margin: 20px;
+  border-radius: 25%;
+  box-shadow: 0 5px 15px -5px #131313;
+  color: #022b47;
+  overflow: hidden;
+  position: relative;
+}
+
+.btn i {
+  line-height: 90px;
+  font-size: 26px;
+  transition: 0.2s linear;
+}
+
+.btn:hover i {
+  transform: scale(1.3);
+  color: #f1f1f1;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  background: #022b47;
+  transform: rotate(45deg);
+  left: -110%;
+  top: 90%;
+}
+
+.btn:hover::before {
+  animation: icons 0.74s 1;
+  top: -10%;
+  left: -10%;
+}
+
+@keyframes icons {
+  0% {
+    top: -110%;
+    left: 90%;
+  }
+  50% {
+    top: 10%;
+    left: -30%;
+  }
+  100% {
+    top: -10%;
+    left: -10%;
+  }
 }

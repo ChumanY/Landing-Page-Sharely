@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Myriad Pro SemiCondensed';
+    src: local('Myriad Pro SemiCondensed Regular'), local('Myriad-Pro-SemiCondensed-Regular'),
+        url('MyriadPro-SemiCn.woff2') format('woff2'),
+        url('MyriadPro-SemiCn.woff') format('woff'),
+        url('MyriadPro-SemiCn.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
